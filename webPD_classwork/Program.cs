@@ -1,7 +1,10 @@
+using webPD_classwork;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IMyService, MyService>();
 
 var app = builder.Build();
 
